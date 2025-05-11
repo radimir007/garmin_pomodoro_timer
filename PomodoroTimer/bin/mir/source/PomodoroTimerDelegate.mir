@@ -24,31 +24,79 @@ C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_Pomo
     }
     [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc"; @line = 10; @symbol_functiondef = [onMenu,10,13,19]; @symbol_return<0> = [Boolean,10,25,32]; ]
     function onMenu() as Boolean {
-C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_10_33_13_4_start:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_10_33_12_4_start:
 [ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 11 8 ]
-        symbol [ WatchUi %tmp.1 11 8 15 ];
-        %tmp.1 = getm $.Toybox.WatchUi;
-        symbol [ pushView %tmp.2 11 16 24 ];
-        %tmp.2 = getv function %tmp.1 :pushView;
-        symbol [ Rez %tmp.6 11 29 32 ];
-        %tmp.6 = getv ? :Rez;
-        symbol [ Menus %tmp.7 11 33 38 ];
-        %tmp.7 = getv %tmp.6 :Menus;
-        symbol [ MainMenu %tmp.8 11 39 47 ];
-        %tmp.8 = getv function ? %tmp.7 :MainMenu;
-        %tmp.3 = newc %tmp.8 ();
-        symbol [ PomodoroTimerMenuDelegate %tmp.12 11 55 80 ];
-        %tmp.12 = getv ? :PomodoroTimerMenuDelegate;
-        %tmp.9 = newc %tmp.12 ();
-        symbol [ WatchUi %tmp.13 11 84 91 ];
-        %tmp.13 = getm $.Toybox.WatchUi;
-        symbol [ SLIDE_UP %tmp.14 11 92 100 ];
-        %tmp.14 = getv %tmp.13 :SLIDE_UP;
-        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.9, %tmp.14);
-[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 12 8 ]
-        %tmp.15 = true;
-        ret %tmp.15;
-C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_10_33_13_4_stop:
+        %tmp.1 = true;
+        ret %tmp.1;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_10_33_12_4_stop:
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc"; @line = 14; @symbol_functiondef = [onTap,14,13,18]; @symbol_param<0> = [clickEvent,14,19,29]; @symbol_param<0>_type<0> = [ClickEvent,14,33,43]; @symbol_return<0> = [Boolean,14,48,55]; ]
+    function onTap(clickEvent as ClickEvent) as Boolean {
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 16 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_stop" ]
+        %coords.1 = local;
+        symbol [ coords %coords.1 16 12 18 ];
+        %tmp.1 = lgetv %clickEvent;
+        symbol [ clickEvent %tmp.1 16 21 31 ];
+        symbol [ getCoordinates %tmp.2 16 32 46 ];
+        %tmp.2 = getv function %tmp.1 :getCoordinates;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %coords.1 %tmp.3;
+        symbol [ coords %coords.1 16 12 18 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 17 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_stop" ]
+        %locY.2 = local;
+        symbol [ locY %locY.2 17 12 16 ];
+        %tmp.4 = lgetv %coords.1;
+        symbol [ coords %tmp.4 17 19 25 ];
+        %tmp.5 = 1;
+        %tmp.6 = agetv %tmp.4 %tmp.5;
+        lputv %locY.2 %tmp.6;
+        symbol [ locY %locY.2 17 12 16 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 19 8 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_stmt:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_12_19_33_begin:
+        %tmp.7 = lgetv %locY.2;
+        symbol [ locY %tmp.7 19 12 16 ];
+        %tmp.8 = 0;
+        %tmp.9 = gte %tmp.7 %tmp.8;
+        bf %tmp.9 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_else_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_25_19_33_true:
+        %tmp.10 = lgetv %locY.2;
+        symbol [ locY %tmp.10 19 25 29 ];
+        %tmp.11 = 150;
+        %tmp.12 = lte %tmp.10 %tmp.11;
+        push %tmp.12;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_25_19_33_end:
+        %tmp.13 = phi [%tmp.9 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_12_19_33_begin] [%tmp.12 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_25_19_33_true] [%tmp.13 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_25_19_33_end];
+        bf %tmp.13 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_else_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_38_21_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 20 12 ]
+        symbol [ System %tmp.15 20 12 18 ];
+        %tmp.15 = getv ? :System;
+        symbol [ println %tmp.16 20 19 26 ];
+        %tmp.16 = getv function %tmp.15 :println;
+        %tmp.17 = "Mode tapped";
+        invoke %tmp.15 %tmp.16(%tmp.17);
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_38_21_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_else_false:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_21_15_23_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 22 12 ]
+        symbol [ System %tmp.19 22 12 18 ];
+        %tmp.19 = getv ? :System;
+        symbol [ println %tmp.20 22 19 26 ];
+        %tmp.20 = getv function %tmp.19 :println;
+        %tmp.21 = "Start tapped";
+        invoke %tmp.19 %tmp.20(%tmp.21);
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_21_15_23_8_stop:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_19_8_23_8_if_end:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc" 25 8 ]
+        %tmp.22 = true;
+        ret %tmp.22;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_PomodoroTimerDelegate_mc_14_56_26_4_stop:
     }
 }
 [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\PomodoroTimerDelegate.mc"; @line = 1; ]

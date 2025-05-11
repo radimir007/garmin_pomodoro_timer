@@ -8,7 +8,20 @@ class PomodoroTimerDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() as Boolean {
-        WatchUi.pushView(new Rez.Menus.MainMenu(), new PomodoroTimerMenuDelegate(), WatchUi.SLIDE_UP);
+        return true;
+    }
+
+    function onTap(clickEvent as ClickEvent) as Boolean {
+        
+        var coords = clickEvent.getCoordinates();
+        var locY = coords[1];
+
+        if (locY >= 0 && locY <= 150) {
+            System.println("Mode tapped");
+        } else {
+            System.println("Start tapped");
+        }
+
         return true;
     }
 
