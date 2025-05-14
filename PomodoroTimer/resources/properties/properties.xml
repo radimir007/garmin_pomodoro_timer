@@ -1,0 +1,3 @@
+<properties>
+    <property id="vibrationStrength" type="number">50</property>
+</properties>

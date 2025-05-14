@@ -1,0 +1,736 @@
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Application,4,14,25]; ]
+import Toybox.Application;
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 6; @symbol_classdef = [EtaManualPickView,6,6,23]; @symbol_extends<0> = [WatchUi,6,32,39]; @symbol_extends<1> = [View,6,40,44]; ]
+class EtaManualPickView extends WatchUi.View {
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 6; ]
+    <init> {
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 8 8 ]
+        symbol [ System %tmp.1 8 19 25 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.2 8 26 43 ];
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :settings %tmp.3;
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 8; @position = 8; @symbol_vardef = [settings,8,8,16]; ]
+    var settings;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 10; @position = 15; @symbol_vardef = [hours,10,15,20]; ]
+    protected
+    var hours = 0;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 10; @position = 26; @symbol_vardef = [minutes,10,26,33]; ]
+    protected
+    var minutes = 0;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 10; @position = 39; @symbol_vardef = [seconds,10,39,46]; ]
+    protected
+    var seconds = 0;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 11; @position = 15; @symbol_vardef = [timeText,11,15,23]; ]
+    protected
+    var timeText;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 11; @position = 25; @symbol_vardef = [instruct,11,25,33]; ]
+    protected
+    var instruct;
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 13; @symbol_functiondef = [initialize,13,13,23]; ]
+    function initialize() as Void {
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_13_26_15_4_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 14 8 ]
+        symbol [ View %tmp.2 14 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 14 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_13_26_15_4_stop:
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 18; @symbol_functiondef = [onLayout,18,13,21]; @symbol_param<0> = [dc,18,22,24]; @symbol_param<0>_type<0> = [Dc,18,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_18_40_22_4_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 20 8 ]
+        %tmp.1 = self;
+        symbol [ setLayout %tmp.2 20 8 17 ];
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        symbol [ Rez %tmp.4 20 18 21 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Layouts %tmp.5 20 22 29 ];
+        %tmp.5 = getv %tmp.4 :Layouts;
+        symbol [ EtaPicker %tmp.6 20 30 39 ];
+        %tmp.6 = getv function %tmp.5 :EtaPicker;
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 20 40 42 ];
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        invoke %tmp.1 %tmp.2(%tmp.8);
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_18_40_22_4_stop:
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 27; @symbol_functiondef = [onShow,27,13,19]; ]
+    function onShow() as Void {
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 32; @symbol_functiondef = [onUpdate,32,13,21]; @symbol_param<0> = [dc,32,22,24]; @symbol_param<0>_type<0> = [Dc,32,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 35 8 ]
+        symbol [ View %tmp.2 35 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ onUpdate %tmp.3 35 13 21 ];
+        %tmp.3 = getv function %tmp.2 :onUpdate;
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 35 22 24 ];
+        invoke %tmp.2 %tmp.3(%tmp.4);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 37 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop" ]
+        %hoursData.1 = local;
+        symbol [ hoursData %hoursData.1 37 12 21 ];
+        symbol [ Application %tmp.5 37 24 35 ];
+        %tmp.5 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.6 37 36 43 ];
+        %tmp.6 = getv %tmp.5 :Storage;
+        symbol [ getValue %tmp.7 37 44 52 ];
+        %tmp.7 = getv function %tmp.6 :getValue;
+        %tmp.8 = "newEtaHours";
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        lputv %hoursData.1 %tmp.9;
+        symbol [ hoursData %hoursData.1 37 12 21 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 38 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop" ]
+        %minutesData.2 = local;
+        symbol [ minutesData %minutesData.2 38 12 23 ];
+        symbol [ Application %tmp.10 38 26 37 ];
+        %tmp.10 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.11 38 38 45 ];
+        %tmp.11 = getv %tmp.10 :Storage;
+        symbol [ getValue %tmp.12 38 46 54 ];
+        %tmp.12 = getv function %tmp.11 :getValue;
+        %tmp.13 = "newEtaMinutes";
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        lputv %minutesData.2 %tmp.14;
+        symbol [ minutesData %minutesData.2 38 12 23 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 39 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop" ]
+        %secondsData.3 = local;
+        symbol [ secondsData %secondsData.3 39 12 23 ];
+        symbol [ Application %tmp.15 39 26 37 ];
+        %tmp.15 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.16 39 38 45 ];
+        %tmp.16 = getv %tmp.15 :Storage;
+        symbol [ getValue %tmp.17 39 46 54 ];
+        %tmp.17 = getv function %tmp.16 :getValue;
+        %tmp.18 = "newEtaSeconds";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        lputv %secondsData.3 %tmp.19;
+        symbol [ secondsData %secondsData.3 39 12 23 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 41 8 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_stmt:
+        %tmp.20 = lgetv %hoursData.1;
+        symbol [ hoursData %tmp.20 41 12 21 ];
+        %tmp.21 = null;
+        %tmp.22 = eq %tmp.20 %tmp.21;
+        bf %tmp.22 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_31_43_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 42 12 ]
+        %tmp.23 = "--";
+        symbol [ hours ? 42 12 17 ];
+        putv self :hours %tmp.23;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_31_43_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_false:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 43 15 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_stmt:
+        %tmp.24 = lgetv %hoursData.1;
+        symbol [ hoursData %tmp.24 43 19 28 ];
+        %tmp.25 = as %tmp.24 { (!Null) };
+        %tmp.26 = 10;
+        %tmp.27 = lt %tmp.25 %tmp.26;
+        bf %tmp.27 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_else_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_35_45_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 44 12 ]
+        %tmp.28 = "0";
+        %tmp.29 = lgetv %hoursData.1;
+        symbol [ hoursData %tmp.29 44 26 35 ];
+        %tmp.30 = as %tmp.29 { (!Null) };
+        %tmp.31 = add %tmp.28 %tmp.30;
+        symbol [ hours ? 44 12 17 ];
+        putv self :hours %tmp.31;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_35_45_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_else_false:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_45_15_47_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 46 12 ]
+        %tmp.32 = lgetv %hoursData.1;
+        symbol [ hoursData %tmp.32 46 20 29 ];
+        %tmp.33 = as %tmp.32 { (!Null) };
+        symbol [ hours ? 46 12 17 ];
+        putv self :hours %tmp.33;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_45_15_47_8_stop:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_43_15_47_8_if_end:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_41_8_47_8_if_end:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 49 8 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_stmt:
+        %tmp.34 = lgetv %minutesData.2;
+        symbol [ minutesData %tmp.34 49 12 23 ];
+        %tmp.35 = null;
+        %tmp.36 = eq %tmp.34 %tmp.35;
+        bf %tmp.36 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_33_51_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 50 12 ]
+        %tmp.37 = "--";
+        symbol [ minutes ? 50 12 19 ];
+        putv self :minutes %tmp.37;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_33_51_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_false:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 51 15 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_stmt:
+        %tmp.38 = lgetv %minutesData.2;
+        symbol [ minutesData %tmp.38 51 19 30 ];
+        %tmp.39 = as %tmp.38 { (!Null) };
+        %tmp.40 = 10;
+        %tmp.41 = lt %tmp.39 %tmp.40;
+        bf %tmp.41 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_else_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_37_53_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 52 12 ]
+        %tmp.42 = "0";
+        %tmp.43 = lgetv %minutesData.2;
+        symbol [ minutesData %tmp.43 52 28 39 ];
+        %tmp.44 = as %tmp.43 { (!Null) };
+        %tmp.45 = add %tmp.42 %tmp.44;
+        symbol [ minutes ? 52 12 19 ];
+        putv self :minutes %tmp.45;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_37_53_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_else_false:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_53_15_55_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 54 12 ]
+        %tmp.46 = lgetv %minutesData.2;
+        symbol [ minutesData %tmp.46 54 22 33 ];
+        %tmp.47 = as %tmp.46 { (!Null) };
+        symbol [ minutes ? 54 12 19 ];
+        putv self :minutes %tmp.47;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_53_15_55_8_stop:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_51_15_55_8_if_end:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_49_8_55_8_if_end:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 57 8 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_stmt:
+        %tmp.48 = lgetv %secondsData.3;
+        symbol [ secondsData %tmp.48 57 12 23 ];
+        %tmp.49 = null;
+        %tmp.50 = eq %tmp.48 %tmp.49;
+        bf %tmp.50 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_33_59_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 58 12 ]
+        %tmp.51 = "--";
+        symbol [ seconds ? 58 12 19 ];
+        putv self :seconds %tmp.51;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_33_59_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_false:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 59 15 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_stmt:
+        %tmp.52 = lgetv %secondsData.3;
+        symbol [ secondsData %tmp.52 59 19 30 ];
+        %tmp.53 = as %tmp.52 { (!Null) };
+        %tmp.54 = 10;
+        %tmp.55 = lt %tmp.53 %tmp.54;
+        bf %tmp.55 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_else_false;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_true:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_37_61_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 60 12 ]
+        %tmp.56 = "0";
+        %tmp.57 = lgetv %secondsData.3;
+        symbol [ secondsData %tmp.57 60 28 39 ];
+        %tmp.58 = as %tmp.57 { (!Null) };
+        %tmp.59 = add %tmp.56 %tmp.58;
+        symbol [ seconds ? 60 12 19 ];
+        putv self :seconds %tmp.59;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_37_61_8_stop:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_end;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_else_false:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_61_15_63_8_start:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 62 12 ]
+        %tmp.60 = lgetv %secondsData.3;
+        symbol [ secondsData %tmp.60 62 22 33 ];
+        %tmp.61 = as %tmp.60 { (!Null) };
+        symbol [ seconds ? 62 12 19 ];
+        putv self :seconds %tmp.61;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_61_15_63_8_stop:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_59_15_63_8_if_end:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_57_8_63_8_if_end:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 65 8 ]
+        symbol [ WatchUi %tmp.64 65 23 30 ];
+        %tmp.64 = getm $.Toybox.WatchUi;
+        symbol [ Text %tmp.65 65 31 35 ];
+        %tmp.65 = getv function ? %tmp.64 :Text;
+        %tmp.66 = newd 8;
+        %tmp.68 = const :text;
+        symbol [ text %tmp.68 66 13 17 const ];
+        symbol [ hours %tmp.70 66 21 26 ];
+        %tmp.70 = getv ? :hours;
+        %tmp.71 = " : ";
+        %tmp.72 = add %tmp.70 %tmp.71;
+        symbol [ minutes %tmp.74 66 37 44 ];
+        %tmp.74 = getv ? :minutes;
+        %tmp.75 = add %tmp.72 %tmp.74;
+        %tmp.76 = " : ";
+        %tmp.77 = add %tmp.75 %tmp.76;
+        symbol [ seconds %tmp.79 66 55 62 ];
+        %tmp.79 = getv ? :seconds;
+        %tmp.80 = add %tmp.77 %tmp.79;
+        %tmp.81 = dup %tmp.66;
+        %tmp.82 = aputv %tmp.81 %tmp.68 %tmp.80;
+        %tmp.84 = const :color;
+        symbol [ color %tmp.84 67 13 18 const ];
+        symbol [ Graphics %tmp.85 67 22 30 ];
+        %tmp.85 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.86 67 31 42 ];
+        %tmp.86 = getv %tmp.85 :COLOR_WHITE;
+        %tmp.87 = dup %tmp.82;
+        %tmp.88 = aputv %tmp.87 %tmp.84 %tmp.86;
+        %tmp.90 = const :locX;
+        symbol [ locX %tmp.90 68 13 17 const ];
+        symbol [ WatchUi %tmp.91 68 21 28 ];
+        %tmp.91 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_HALIGN_CENTER %tmp.92 68 29 49 ];
+        %tmp.92 = getv %tmp.91 :LAYOUT_HALIGN_CENTER;
+        %tmp.93 = dup %tmp.88;
+        %tmp.94 = aputv %tmp.93 %tmp.90 %tmp.92;
+        %tmp.96 = const :locY;
+        symbol [ locY %tmp.96 69 13 17 const ];
+        symbol [ WatchUi %tmp.97 69 21 28 ];
+        %tmp.97 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_VALIGN_CENTER %tmp.98 69 29 49 ];
+        %tmp.98 = getv %tmp.97 :LAYOUT_VALIGN_CENTER;
+        %tmp.99 = dup %tmp.94;
+        %tmp.100 = aputv %tmp.99 %tmp.96 %tmp.98;
+        %tmp.102 = const :font;
+        symbol [ font %tmp.102 70 13 17 const ];
+        symbol [ Graphics %tmp.103 70 21 29 ];
+        %tmp.103 = getm $.Toybox.Graphics;
+        symbol [ FONT_LARGE %tmp.104 70 30 40 ];
+        %tmp.104 = getv %tmp.103 :FONT_LARGE;
+        %tmp.105 = dup %tmp.100;
+        %tmp.106 = aputv %tmp.105 %tmp.102 %tmp.104;
+        %tmp.108 = const :width;
+        symbol [ width %tmp.108 71 13 18 const ];
+        %tmp.109 = lgetv %dc;
+        symbol [ dc %tmp.109 71 22 24 ];
+        symbol [ getWidth %tmp.110 71 25 33 ];
+        %tmp.110 = getv function %tmp.109 :getWidth;
+        %tmp.111 = invoke %tmp.109 %tmp.110();
+        %tmp.112 = dup %tmp.106;
+        %tmp.113 = aputv %tmp.112 %tmp.108 %tmp.111;
+        %tmp.115 = const :height;
+        symbol [ height %tmp.115 72 13 19 const ];
+        %tmp.116 = 50;
+        %tmp.117 = dup %tmp.113;
+        %tmp.118 = aputv %tmp.117 %tmp.115 %tmp.116;
+        %tmp.120 = const :justification;
+        symbol [ justification %tmp.120 73 13 26 const ];
+        symbol [ Graphics %tmp.121 73 30 38 ];
+        %tmp.121 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.122 73 39 58 ];
+        %tmp.122 = getv %tmp.121 :TEXT_JUSTIFY_CENTER;
+        %tmp.123 = dup %tmp.118;
+        %tmp.124 = aputv %tmp.123 %tmp.120 %tmp.122;
+        %tmp.62 = newc %tmp.65 (%tmp.124);
+        symbol [ timeText ? 65 8 16 ];
+        putv self :timeText %tmp.62;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 77 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop" ]
+        %instructText.4 = local;
+        symbol [ instructText %instructText.4 77 12 24 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 79 8 ]
+        %tmp.125 = lgetv %dc;
+        symbol [ dc %tmp.125 79 8 10 ];
+        symbol [ setPenWidth %tmp.126 79 11 22 ];
+        %tmp.126 = getv function %tmp.125 :setPenWidth;
+        %tmp.127 = 3;
+        invoke %tmp.125 %tmp.126(%tmp.127);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 81 8 ]
+        symbol [ Application %tmp.128 81 16 27 ];
+        %tmp.128 = getm $.Toybox.Application;
+        symbol [ Storage %tmp.129 81 28 35 ];
+        %tmp.129 = getv %tmp.128 :Storage;
+        symbol [ getValue %tmp.130 81 36 44 ];
+        %tmp.130 = getv function %tmp.129 :getValue;
+        %tmp.131 = "newEtaSegment";
+        %tmp.132 = invoke %tmp.129 %tmp.130(%tmp.131);
+        push %tmp.132;
+        switch %tmp.132 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtEnd;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtBegin:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 82 12 ]
+        %tmp.133 = dup %tmp.132;
+        %tmp.134 = 0;
+        %tmp.135 = getv function %tmp.133 :equals;
+        %tmp.136 = invoke %tmp.133 %tmp.135 (%tmp.134);
+        bt %tmp.136 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_82_12_85_21_switchCase;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 87 12 ]
+        %tmp.137 = dup %tmp.132;
+        %tmp.138 = 1;
+        %tmp.139 = getv function %tmp.137 :equals;
+        %tmp.140 = invoke %tmp.137 %tmp.139 (%tmp.138);
+        bt %tmp.140 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_87_12_90_21_switchCase;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 92 12 ]
+        %tmp.141 = dup %tmp.132;
+        %tmp.142 = 2;
+        %tmp.143 = getv function %tmp.141 :equals;
+        %tmp.144 = invoke %tmp.141 %tmp.143 (%tmp.142);
+        bt %tmp.144 @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_92_12_95_21_switchCase;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 97 12 ]
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtDefault:
+        goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_defaultCodeBegin;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_82_12_85_21_switchCase:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 83 16 ]
+        %tmp.145 = "Set hours:";
+        lputv %instructText.4 %tmp.145;
+        symbol [ instructText %instructText.4 83 16 28 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 84 16 ]
+        %tmp.146 = lgetv %dc;
+        symbol [ dc %tmp.146 84 16 18 ];
+        symbol [ drawLine %tmp.147 84 19 27 ];
+        %tmp.147 = getv function %tmp.146 :drawLine;
+        %tmp.148 = lgetv %dc;
+        symbol [ dc %tmp.148 84 28 30 ];
+        symbol [ getWidth %tmp.149 84 31 39 ];
+        %tmp.149 = getv function %tmp.148 :getWidth;
+        %tmp.150 = invoke %tmp.148 %tmp.149();
+        %tmp.151 = 2;
+        %tmp.152 = div %tmp.150 %tmp.151;
+        %tmp.153 = 120;
+        %tmp.154 = sub %tmp.152 %tmp.153;
+        %tmp.155 = lgetv %dc;
+        symbol [ dc %tmp.155 84 53 55 ];
+        symbol [ getHeight %tmp.156 84 56 65 ];
+        %tmp.156 = getv function %tmp.155 :getHeight;
+        %tmp.157 = invoke %tmp.155 %tmp.156();
+        %tmp.158 = 2;
+        %tmp.159 = div %tmp.157 %tmp.158;
+        %tmp.160 = 35;
+        %tmp.161 = add %tmp.159 %tmp.160;
+        %tmp.162 = lgetv %dc;
+        symbol [ dc %tmp.162 84 78 80 ];
+        symbol [ getWidth %tmp.163 84 81 89 ];
+        %tmp.163 = getv function %tmp.162 :getWidth;
+        %tmp.164 = invoke %tmp.162 %tmp.163();
+        %tmp.165 = 2;
+        %tmp.166 = div %tmp.164 %tmp.165;
+        %tmp.167 = 65;
+        %tmp.168 = sub %tmp.166 %tmp.167;
+        %tmp.169 = lgetv %dc;
+        symbol [ dc %tmp.169 84 102 104 ];
+        symbol [ getHeight %tmp.170 84 105 114 ];
+        %tmp.170 = getv function %tmp.169 :getHeight;
+        %tmp.171 = invoke %tmp.169 %tmp.170();
+        %tmp.172 = 2;
+        %tmp.173 = div %tmp.171 %tmp.172;
+        %tmp.174 = 35;
+        %tmp.175 = add %tmp.173 %tmp.174;
+        invoke %tmp.146 %tmp.147(%tmp.154, %tmp.161, %tmp.168, %tmp.175);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 85 16 ]
+        goto break @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtEnd;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_87_12_90_21_switchCase:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 88 16 ]
+        %tmp.176 = "Set minutes:";
+        lputv %instructText.4 %tmp.176;
+        symbol [ instructText %instructText.4 88 16 28 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 89 16 ]
+        %tmp.177 = lgetv %dc;
+        symbol [ dc %tmp.177 89 16 18 ];
+        symbol [ drawLine %tmp.178 89 19 27 ];
+        %tmp.178 = getv function %tmp.177 :drawLine;
+        %tmp.179 = lgetv %dc;
+        symbol [ dc %tmp.179 89 28 30 ];
+        symbol [ getWidth %tmp.180 89 31 39 ];
+        %tmp.180 = getv function %tmp.179 :getWidth;
+        %tmp.181 = invoke %tmp.179 %tmp.180();
+        %tmp.182 = 2;
+        %tmp.183 = div %tmp.181 %tmp.182;
+        %tmp.184 = 28;
+        %tmp.185 = sub %tmp.183 %tmp.184;
+        %tmp.186 = lgetv %dc;
+        symbol [ dc %tmp.186 89 52 54 ];
+        symbol [ getHeight %tmp.187 89 55 64 ];
+        %tmp.187 = getv function %tmp.186 :getHeight;
+        %tmp.188 = invoke %tmp.186 %tmp.187();
+        %tmp.189 = 2;
+        %tmp.190 = div %tmp.188 %tmp.189;
+        %tmp.191 = 35;
+        %tmp.192 = add %tmp.190 %tmp.191;
+        %tmp.193 = lgetv %dc;
+        symbol [ dc %tmp.193 89 77 79 ];
+        symbol [ getWidth %tmp.194 89 80 88 ];
+        %tmp.194 = getv function %tmp.193 :getWidth;
+        %tmp.195 = invoke %tmp.193 %tmp.194();
+        %tmp.196 = 2;
+        %tmp.197 = div %tmp.195 %tmp.196;
+        %tmp.198 = 28;
+        %tmp.199 = add %tmp.197 %tmp.198;
+        %tmp.200 = lgetv %dc;
+        symbol [ dc %tmp.200 89 101 103 ];
+        symbol [ getHeight %tmp.201 89 104 113 ];
+        %tmp.201 = getv function %tmp.200 :getHeight;
+        %tmp.202 = invoke %tmp.200 %tmp.201();
+        %tmp.203 = 2;
+        %tmp.204 = div %tmp.202 %tmp.203;
+        %tmp.205 = 35;
+        %tmp.206 = add %tmp.204 %tmp.205;
+        invoke %tmp.177 %tmp.178(%tmp.185, %tmp.192, %tmp.199, %tmp.206);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 90 16 ]
+        goto break @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtEnd;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_92_12_95_21_switchCase:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 93 16 ]
+        %tmp.207 = "Set seconds:";
+        lputv %instructText.4 %tmp.207;
+        symbol [ instructText %instructText.4 93 16 28 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 94 16 ]
+        %tmp.208 = lgetv %dc;
+        symbol [ dc %tmp.208 94 16 18 ];
+        symbol [ drawLine %tmp.209 94 19 27 ];
+        %tmp.209 = getv function %tmp.208 :drawLine;
+        %tmp.210 = lgetv %dc;
+        symbol [ dc %tmp.210 94 28 30 ];
+        symbol [ getWidth %tmp.211 94 31 39 ];
+        %tmp.211 = getv function %tmp.210 :getWidth;
+        %tmp.212 = invoke %tmp.210 %tmp.211();
+        %tmp.213 = 2;
+        %tmp.214 = div %tmp.212 %tmp.213;
+        %tmp.215 = 65;
+        %tmp.216 = add %tmp.214 %tmp.215;
+        %tmp.217 = lgetv %dc;
+        symbol [ dc %tmp.217 94 52 54 ];
+        symbol [ getHeight %tmp.218 94 55 64 ];
+        %tmp.218 = getv function %tmp.217 :getHeight;
+        %tmp.219 = invoke %tmp.217 %tmp.218();
+        %tmp.220 = 2;
+        %tmp.221 = div %tmp.219 %tmp.220;
+        %tmp.222 = 35;
+        %tmp.223 = add %tmp.221 %tmp.222;
+        %tmp.224 = lgetv %dc;
+        symbol [ dc %tmp.224 94 77 79 ];
+        symbol [ getWidth %tmp.225 94 80 88 ];
+        %tmp.225 = getv function %tmp.224 :getWidth;
+        %tmp.226 = invoke %tmp.224 %tmp.225();
+        %tmp.227 = 2;
+        %tmp.228 = div %tmp.226 %tmp.227;
+        %tmp.229 = 120;
+        %tmp.230 = add %tmp.228 %tmp.229;
+        %tmp.231 = lgetv %dc;
+        symbol [ dc %tmp.231 94 102 104 ];
+        symbol [ getHeight %tmp.232 94 105 114 ];
+        %tmp.232 = getv function %tmp.231 :getHeight;
+        %tmp.233 = invoke %tmp.231 %tmp.232();
+        %tmp.234 = 2;
+        %tmp.235 = div %tmp.233 %tmp.234;
+        %tmp.236 = 35;
+        %tmp.237 = add %tmp.235 %tmp.236;
+        invoke %tmp.208 %tmp.209(%tmp.216, %tmp.223, %tmp.230, %tmp.237);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 95 16 ]
+        goto break @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtEnd;
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_97_12_98_33_switchCase:
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_defaultCodeBegin:
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 98 16 ]
+        %tmp.238 = "";
+        lputv %instructText.4 %tmp.238;
+        symbol [ instructText %instructText.4 98 16 28 ];
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_81_8_99_8_switchStmtEnd:
+        pop;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 101 8 ]
+        symbol [ WatchUi %tmp.241 101 23 30 ];
+        %tmp.241 = getm $.Toybox.WatchUi;
+        symbol [ Text %tmp.242 101 31 35 ];
+        %tmp.242 = getv function ? %tmp.241 :Text;
+        %tmp.243 = newd 8;
+        %tmp.245 = const :text;
+        symbol [ text %tmp.245 102 13 17 const ];
+        %tmp.246 = lgetv %instructText.4;
+        symbol [ instructText %tmp.246 102 21 33 ];
+        %tmp.247 = dup %tmp.243;
+        %tmp.248 = aputv %tmp.247 %tmp.245 %tmp.246;
+        %tmp.250 = const :color;
+        symbol [ color %tmp.250 103 13 18 const ];
+        symbol [ Graphics %tmp.251 103 22 30 ];
+        %tmp.251 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.252 103 31 42 ];
+        %tmp.252 = getv %tmp.251 :COLOR_WHITE;
+        %tmp.253 = dup %tmp.248;
+        %tmp.254 = aputv %tmp.253 %tmp.250 %tmp.252;
+        %tmp.256 = const :locX;
+        symbol [ locX %tmp.256 104 13 17 const ];
+        symbol [ WatchUi %tmp.257 104 21 28 ];
+        %tmp.257 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_HALIGN_CENTER %tmp.258 104 29 49 ];
+        %tmp.258 = getv %tmp.257 :LAYOUT_HALIGN_CENTER;
+        %tmp.259 = dup %tmp.254;
+        %tmp.260 = aputv %tmp.259 %tmp.256 %tmp.258;
+        %tmp.262 = const :locY;
+        symbol [ locY %tmp.262 105 13 17 const ];
+        %tmp.263 = lgetv %dc;
+        symbol [ dc %tmp.263 105 21 23 ];
+        symbol [ getHeight %tmp.264 105 24 33 ];
+        %tmp.264 = getv function %tmp.263 :getHeight;
+        %tmp.265 = invoke %tmp.263 %tmp.264();
+        %tmp.266 = 2;
+        %tmp.267 = div %tmp.265 %tmp.266;
+        %tmp.268 = lgetv %dc;
+        symbol [ dc %tmp.268 105 42 44 ];
+        symbol [ getHeight %tmp.269 105 45 54 ];
+        %tmp.269 = getv function %tmp.268 :getHeight;
+        %tmp.270 = invoke %tmp.268 %tmp.269();
+        %tmp.271 = 4;
+        %tmp.272 = div %tmp.270 %tmp.271;
+        %tmp.273 = sub %tmp.267 %tmp.272;
+        %tmp.274 = dup %tmp.260;
+        %tmp.275 = aputv %tmp.274 %tmp.262 %tmp.273;
+        %tmp.277 = const :font;
+        symbol [ font %tmp.277 106 13 17 const ];
+        symbol [ Graphics %tmp.278 106 21 29 ];
+        %tmp.278 = getm $.Toybox.Graphics;
+        symbol [ FONT_TINY %tmp.279 106 30 39 ];
+        %tmp.279 = getv %tmp.278 :FONT_TINY;
+        %tmp.280 = dup %tmp.275;
+        %tmp.281 = aputv %tmp.280 %tmp.277 %tmp.279;
+        %tmp.283 = const :width;
+        symbol [ width %tmp.283 107 13 18 const ];
+        %tmp.284 = lgetv %dc;
+        symbol [ dc %tmp.284 107 22 24 ];
+        symbol [ getWidth %tmp.285 107 25 33 ];
+        %tmp.285 = getv function %tmp.284 :getWidth;
+        %tmp.286 = invoke %tmp.284 %tmp.285();
+        %tmp.287 = dup %tmp.281;
+        %tmp.288 = aputv %tmp.287 %tmp.283 %tmp.286;
+        %tmp.290 = const :height;
+        symbol [ height %tmp.290 108 13 19 const ];
+        %tmp.291 = 50;
+        %tmp.292 = dup %tmp.288;
+        %tmp.293 = aputv %tmp.292 %tmp.290 %tmp.291;
+        %tmp.295 = const :justification;
+        symbol [ justification %tmp.295 109 13 26 const ];
+        symbol [ Graphics %tmp.296 109 30 38 ];
+        %tmp.296 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.297 109 39 58 ];
+        %tmp.297 = getv %tmp.296 :TEXT_JUSTIFY_CENTER;
+        %tmp.298 = dup %tmp.293;
+        %tmp.299 = aputv %tmp.298 %tmp.295 %tmp.297;
+        %tmp.239 = newc %tmp.242 (%tmp.299);
+        symbol [ instruct ? 101 8 16 ];
+        putv self :instruct %tmp.239;
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 112 8 ]
+        [ "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_start" "C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop" ]
+        %instruct2.5 = local;
+        symbol [ instruct2 %instruct2.5 112 12 21 ];
+        symbol [ WatchUi %tmp.302 112 28 35 ];
+        %tmp.302 = getm $.Toybox.WatchUi;
+        symbol [ Text %tmp.303 112 36 40 ];
+        %tmp.303 = getv function ? %tmp.302 :Text;
+        %tmp.304 = newd 7;
+        %tmp.306 = const :text;
+        symbol [ text %tmp.306 113 13 17 const ];
+        %tmp.307 = "Press ENTER to continue";
+        %tmp.308 = dup %tmp.304;
+        %tmp.309 = aputv %tmp.308 %tmp.306 %tmp.307;
+        %tmp.311 = const :color;
+        symbol [ color %tmp.311 114 13 18 const ];
+        symbol [ Graphics %tmp.312 114 22 30 ];
+        %tmp.312 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.313 114 31 44 ];
+        %tmp.313 = getv %tmp.312 :COLOR_DK_GRAY;
+        %tmp.314 = dup %tmp.309;
+        %tmp.315 = aputv %tmp.314 %tmp.311 %tmp.313;
+        %tmp.317 = const :locX;
+        symbol [ locX %tmp.317 115 13 17 const ];
+        symbol [ WatchUi %tmp.318 115 21 28 ];
+        %tmp.318 = getm $.Toybox.WatchUi;
+        symbol [ LAYOUT_HALIGN_CENTER %tmp.319 115 29 49 ];
+        %tmp.319 = getv %tmp.318 :LAYOUT_HALIGN_CENTER;
+        %tmp.320 = dup %tmp.315;
+        %tmp.321 = aputv %tmp.320 %tmp.317 %tmp.319;
+        %tmp.323 = const :locY;
+        symbol [ locY %tmp.323 116 13 17 const ];
+        %tmp.324 = lgetv %dc;
+        symbol [ dc %tmp.324 116 21 23 ];
+        symbol [ getHeight %tmp.325 116 24 33 ];
+        %tmp.325 = getv function %tmp.324 :getHeight;
+        %tmp.326 = invoke %tmp.324 %tmp.325();
+        %tmp.327 = 2;
+        %tmp.328 = div %tmp.326 %tmp.327;
+        %tmp.329 = lgetv %dc;
+        symbol [ dc %tmp.329 116 42 44 ];
+        symbol [ getHeight %tmp.330 116 45 54 ];
+        %tmp.330 = getv function %tmp.329 :getHeight;
+        %tmp.331 = invoke %tmp.329 %tmp.330();
+        %tmp.332 = 5;
+        %tmp.333 = div %tmp.331 %tmp.332;
+        %tmp.334 = add %tmp.328 %tmp.333;
+        %tmp.335 = dup %tmp.321;
+        %tmp.336 = aputv %tmp.335 %tmp.323 %tmp.334;
+        %tmp.338 = const :font;
+        symbol [ font %tmp.338 117 13 17 const ];
+        symbol [ Graphics %tmp.339 117 21 29 ];
+        %tmp.339 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.340 117 30 40 ];
+        %tmp.340 = getv %tmp.339 :FONT_XTINY;
+        %tmp.341 = dup %tmp.336;
+        %tmp.342 = aputv %tmp.341 %tmp.338 %tmp.340;
+        %tmp.344 = const :width;
+        symbol [ width %tmp.344 118 13 18 const ];
+        %tmp.345 = lgetv %dc;
+        symbol [ dc %tmp.345 118 22 24 ];
+        symbol [ getWidth %tmp.346 118 25 33 ];
+        %tmp.346 = getv function %tmp.345 :getWidth;
+        %tmp.347 = invoke %tmp.345 %tmp.346();
+        %tmp.348 = dup %tmp.342;
+        %tmp.349 = aputv %tmp.348 %tmp.344 %tmp.347;
+        %tmp.351 = const :justification;
+        symbol [ justification %tmp.351 119 13 26 const ];
+        symbol [ Graphics %tmp.352 119 30 38 ];
+        %tmp.352 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.353 119 39 58 ];
+        %tmp.353 = getv %tmp.352 :TEXT_JUSTIFY_CENTER;
+        %tmp.354 = dup %tmp.349;
+        %tmp.355 = aputv %tmp.354 %tmp.351 %tmp.353;
+        %tmp.300 = newc %tmp.303 (%tmp.355);
+        lputv %instruct2.5 %tmp.300;
+        symbol [ instruct2 %instruct2.5 112 12 21 ];
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 124 8 ]
+        symbol [ timeText %tmp.357 124 8 16 ];
+        %tmp.357 = getv ? :timeText;
+        symbol [ draw %tmp.358 124 17 21 ];
+        %tmp.358 = getv function %tmp.357 :draw;
+        %tmp.359 = lgetv %dc;
+        symbol [ dc %tmp.359 124 22 24 ];
+        invoke %tmp.357 %tmp.358(%tmp.359);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 125 8 ]
+        symbol [ instruct %tmp.361 125 8 16 ];
+        %tmp.361 = getv ? :instruct;
+        symbol [ draw %tmp.362 125 17 21 ];
+        %tmp.362 = getv function %tmp.361 :draw;
+        %tmp.363 = lgetv %dc;
+        symbol [ dc %tmp.363 125 22 24 ];
+        invoke %tmp.361 %tmp.362(%tmp.363);
+[ "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc" 126 8 ]
+        %tmp.364 = lgetv %instruct2.5;
+        symbol [ instruct2 %tmp.364 126 8 17 ];
+        symbol [ draw %tmp.365 126 18 22 ];
+        %tmp.365 = getv function %tmp.364 :draw;
+        %tmp.366 = lgetv %dc;
+        symbol [ dc %tmp.366 126 23 25 ];
+        invoke %tmp.364 %tmp.365(%tmp.366);
+C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_EtaManualPickView_mc_32_40_127_4_stop:
+    }
+    [ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 132; @symbol_functiondef = [onHide,132,13,19]; ]
+    function onHide() as Void {
+    }
+}
+[ @file = "C:\Users\Okay\Desktop\garmin_apps\garmin_pomodoro_timer\PomodoroTimer\source\views\EtaManualPickView.mc"; @line = 1; ]
+<init> {
+}

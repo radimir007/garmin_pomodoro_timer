@@ -6,6 +6,29 @@ class PomodoroTimerApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();
+
+        if (Application.Storage.getValue("modes") == null) {
+            var options = [
+                {
+                    "label" => "Study",
+                    "shortBreak" => 5,
+                    "longBreak" => 30,
+                    "pomodoro" => 30,
+                    "group" => 2
+                },
+                {
+                    "label" => "Work",
+                    "shortBreak" => 10,
+                    "longBreak" => 30,
+                    "pomodoro" => 25,
+                    "group" => 3
+                }
+            ];
+
+            Application.Storage.setValue("modes", options);
+        }
+
+        Application.Storage.setValue("isTimerInitialized", false);
     }
 
     // onStart() is called on application start up
