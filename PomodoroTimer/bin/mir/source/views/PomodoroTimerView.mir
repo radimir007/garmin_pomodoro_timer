@@ -997,8 +997,8 @@ C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_view
         %tmp.207 = getv function %tmp.206 :setColor;
         symbol [ Graphics %tmp.208 166 31 39 ];
         %tmp.208 = getm $.Toybox.Graphics;
-        symbol [ COLOR_ORANGE %tmp.209 166 40 52 ];
-        %tmp.209 = getv %tmp.208 :COLOR_ORANGE;
+        symbol [ COLOR_WHITE %tmp.209 166 40 51 ];
+        %tmp.209 = getv %tmp.208 :COLOR_WHITE;
         invoke %tmp.206 %tmp.207(%tmp.209);
 C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_PomodoroTimerView_mc_154_66_167_8_stop:
         goto @C_Users_Okay_Desktop_garmin_apps_garmin_pomodoro_timer_PomodoroTimer_source_views_PomodoroTimerView_mc_154_8_167_8_if_end;

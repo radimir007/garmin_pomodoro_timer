@@ -163,7 +163,7 @@ class PomodoroTimerView extends WatchUi.View {
 
             Application.Storage.deleteValue("resetRequest");
 
-            mainTimer.setColor(Graphics.COLOR_ORANGE);
+            mainTimer.setColor(Graphics.COLOR_WHITE);
         }
 
         if (Application.Storage.getValue("isTimerInitialized") == false) {

@@ -164,6 +164,11 @@ class ResetMenuDelegate extends WatchUi.Menu2InputDelegate {
                 WatchUi.popView(WatchUi.SLIDE_UP);
 
                 break;
+
+            case "exit":
+                System.exit();
+
+                // TODO backgrounding
         }
     }
 
@@ -269,9 +274,9 @@ class VibrationsMenuDelegate extends WatchUi.Menu2InputDelegate {
         Application.Properties.setValue("vibrationStrength", item.getId());
 
         var vibeData = [new Attention.VibeProfile(item.getId() as Number, 750)];
-
         Attention.vibrate(vibeData);
 
+        WatchUi.popView(WatchUi.SLIDE_LEFT);
     }
 
 }
